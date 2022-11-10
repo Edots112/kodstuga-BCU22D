@@ -1,0 +1,8 @@
+[
+    { "firstName": "Anna", "lastName":"Smith", "age": 20, "password": "test" },
+    { "firstName": "John", "lastName": "Doe", "age": 30, "password": "test" },
+    { "firstName": "Bob", "lastName": "Marley", "age": 40, "password": "test" },
+    { "firstName": "Kate", "lastName": "Winslet", "age": 50, "password": "test" },
+    { "firstName": "Kalle", "lastName": "Herbert", "age": 50, "password": "test" },
+    { "firstName": "Janne", "lastName": "Kemi", "age": 50, "password": "test" }
+]
