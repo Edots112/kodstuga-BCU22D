@@ -59,9 +59,25 @@ function printPersons() {
 
     for (i = 0; i < persons.length; i++) {
        // console.log("person in for", persons[i]);
-        personsList.insertAdjacentHTML("afterbegin", persons[i].firstName + "<br/>");
+        personsList.insertAdjacentHTML("afterbegin", "<div id="+ persons[i].firstName +">" + persons[i].firstName + "</div>");
     }
     
 }
+
+personsList.addEventListener("click", (event) => {
+    console.log("click", event.target.id);
+
+    // HÄMTA
+    let persons = JSON.parse(localStorage.getItem("persons"));
+
+    // ÄNDRA
+    persons = persons.filter(person => person.firstName !== event.target.id);
+    console.log("persons after filter", persons);
+
+    // SPARA
+    localStorage.setItem("persons", JSON.stringify(persons));
+
+    printPersons();
+})
 
 printPersons();
