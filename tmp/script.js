@@ -26,3 +26,9 @@ zoo.addEventListener("click", (e) => {
         console.log("Dont delete");
     }
 })
+
+lista = ["a", "b", "c", "d"]
+
+lista = lista.filter(item => item !== "b")
+
+console.log("lista", lista);
