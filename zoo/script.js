@@ -1,7 +1,4 @@
 let zoo = document.getElementById("zoo");
-let info = document.getElementById("info");
-
-info.innerText = "<strong>FEEET</strong>";
 
 let animals = ["Katt", "Hund", "Gris", "Tupp"];
 
@@ -16,9 +13,21 @@ let animals = ["Katt", "Hund", "Gris", "Tupp"];
 // }
 
 animals.map(animal => {
-    let listItem = document.createElement("li")
+    let listItem = document.createElement("div")
     listItem.innerHTML = animal;
     listItem.id = animal;
     listItem.style.color = "red";
+
+    listItem.className = "box";
+
+    listItem.addEventListener("click", () => {
+        listItem.classList.toggle("darkBg")
+    })
+
+    // classList.remove("foo");
+    // classList.replace("foo", "bar");
+
+    console.log(listItem.classList.contains("foo"));
+
     zoo.appendChild(listItem)
 })
