@@ -1,13 +1,13 @@
 export default class User {
 
-
-    constructor(name) {
+    constructor(name, email) {
         this.id = self.crypto.randomUUID();
         this.name = name;
+        this._email = email;
     }
 
     sayHello() {
-        return "My name is " + this.name;
+        return "My name is " + this._email;
     }
 
     setName(newName) {

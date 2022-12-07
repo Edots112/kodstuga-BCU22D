@@ -4,9 +4,9 @@ import User from "./user.js";
 
 let messageBox = document.getElementById("messageBox");
 
-let kalle = new User("Kalle")
-let pelle = new User("Pelle")
-console.log("kalle", kalle.name);
+let kalle = new User("Kalle", "kalle@mail.com")
+let pelle = new User("Pelle", "pelle@mail.com")
+console.log("kalle", kalle._email);
 console.log("kalle", kalle.sayHello());
 kalle.setName("Herman");
 console.log("kalle", kalle.sayHello());
