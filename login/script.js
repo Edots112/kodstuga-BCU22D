@@ -41,13 +41,24 @@ createBtn.addEventListener("click", () => {
     console.log("users", users);
 })
 
-loginBtn.addEventListener("click", () => {
+loginBtn.addEventListener("click", async () => {
     let foundUser = users.users.find(user => user.name === loginName.value);
     // KOLLA OM FOUNDUSER ÄR TRUE
     console.log("foundUser", foundUser);
     console.log("Testa lösenordet: ", foundUser.checkPassword(loginPassword.value));
+    let userId = await foundUser.checkPassword(loginPassword.value);
+    console.log("userId", userId);
+    foundUser.toggleStatus()
+    localStorage.setItem("userId", userId);
+    console.log("userList", users);
 
+    console.log(users.tellUsAboutUsers());
 })
+
+// function getUserName() {
+//     let foundUser = users.users.find(user => user.id === localStorage.getItem("userId"));
+//     let showAdress = founcdUser.adress;
+// }
 
 let users = new UserList();
 console.log("userList", users);

@@ -3,6 +3,11 @@ export default class User {
         this.name = name;
         this.password = this.savePassword(password);
         this.id = self.crypto.randomUUID();
+        this.online = false;
+    }
+
+    toggleStatus() {
+        this.online = !this.online;
     }
 
    async consumePassword(password) {
